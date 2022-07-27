@@ -6,8 +6,8 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 from PIL import Image
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# cuda" if torch.cuda.is_available() else
+device = torch.device("cpu")
 
 image = Image.open('cry.png')
 st.image(image, caption="我只看得懂 0~9 嗚嗚嗚")
