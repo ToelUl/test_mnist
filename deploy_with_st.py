@@ -62,7 +62,7 @@ def load_model():
 
     # 建立模型物件
     model = Net()
-    model.load_state_dict(torch.load('model.pth'))
+    model.load_state_dict(torch.load('model.pth', map_location='cpu'))
     model.eval()
     model = model.to(device)
     return model
